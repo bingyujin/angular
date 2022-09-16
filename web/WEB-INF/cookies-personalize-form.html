@@ -1,0 +1,63 @@
+ <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personalize the site</title>
+
+    <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+    <script src="cookies-personalize-response.jsp"></script>
+
+
+    <style>
+        .error {
+            border: 1px solid blue;
+            padding: 10px 15px;
+            margin: 0 0 10px;
+            border-radius: 4px
+        }
+
+        .error--warning {
+            border: 1px solid red;
+            padding: 10px 15px;
+            margin: 0 0 10px;
+            border-radius: 4px
+        }
+
+        .error--invalid {
+            border: 1px solid green;
+            padding: 10px 15px;
+            margin: 0 0 10px;
+            border-radius: 4px
+        }
+    </style>
+
+</head>
+<body>
+
+<form action="cookies-personalize-response.jsp">
+    Select your Favorite Programming Language
+    <select name="favoriteLanguage">
+        <option>Java</option>
+        <option>C#</option>
+        <option>PHP</option>
+        <option>Ruby</option>
+    </select>
+     <br/><br/>
+    <input type="submit" value="Submit"/>
+</form>
+</body>
+</html>
+
+
+<!--
+ <hero-Ketail hero1="ctrl1.hero"></hero-Ketail>
+ hero1=ctr1.hero//get construtor of controller
+ through <hero-Ketail>, hero1 binds to component 'heroKetail1'  ,bindings: {hero1: '<'}
+ through templateUrl: 'heroFetail.html',{{$ctrl.hero1.name}} in heroFetail.html get hero1 from component
+
+
+
+Copyright 2022 Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->

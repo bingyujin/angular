@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="angular-test-examples-master:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/angular_test_examples_master_war</output-path>
+    <root id="archive" name="angular-test-examples-master_war.war">
+      <element id="artifact" artifact-name="angular-test-examples-master:war exploded" />
+    </root>
+  </artifact>
+</component>

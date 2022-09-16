@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example - example-heroComponentSimple-production</title>
+
+
+    <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script src="index.js"></script>
+
+
+</head>
+
+<!-- components match only elements -->
+
+<body ng-app="myApp">
+
+<a href="#/!">Main</a>
+<a href="#!banana">Banana</a>
+<a href="#!tomato">Tomato</a>
+
+<p>Click on the links to change the content.</p>
+
+<p>The HTML shown in the ng-view directive are written in the template property of the $routeProvider.when method.</p>
+
+<div ng-view></div>
+
+
+</body>
+
+</html>
+
+<!--
+Copyright 2022 Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->

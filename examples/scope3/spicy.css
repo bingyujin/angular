@@ -1,0 +1,4 @@
+/* remove .doc-example-live in jsfiddle */
+.doc-example-live .ng-scope {
+    border: 1px dashed red;
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example - example-heroComponentSimple-production</title>
+
+    <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+    <script src="index.js"></script>
+
+
+
+</head>
+<body ng-app="heroApp">
+<!-- components match only elements -->
+<div ng-controller="mainController">
+    <div style="color: blue">
+        <b>Hero</b><br>
+        <div main-directive></div>
+        <main-directive></main-directive>
+        <b>1</b><br>
+
+    </div>
+</div>
+</body>
+</html>
+
+
+<!--
+ <hero-Ketail hero1="ctrl1.hero"></hero-Ketail>
+ hero1=ctr1.hero//get construtor of controller
+ through <hero-Ketail>, hero1 binds to component 'heroKetail1'  ,bindings: {hero1: '<'}
+ through templateUrl: 'heroFetail.html',{{$ctrl.hero1.name}} in heroFetail.html get hero1 from component
+
+
+
+Copyright 2022 Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->

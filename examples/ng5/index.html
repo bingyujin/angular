@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example - example-heroComponentSimple-production</title>
+
+
+    <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+    <script src="index.js"></script>
+
+
+</head>
+<body ng-app="myApp">
+<!-- components match only elements -->
+
+<div ng-controller="myCtrl">
+    我是父作用域：<input type="text" ng-model="name"><br>
+    <my-name user-name="name" say-name="sayName"></my-name>
+</div>
+</body>
+</html>
+
+<!--
+Copyright 2022 Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->

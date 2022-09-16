@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Example - example-guide-concepts-2-production</title>
+    <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+    <script src="spicy.js"></script>
+    <link rel="stylesheet" href="spicy.css">
+</head>
+<body>
+<div ng-app="myApp" ng-controller="EmployeeController">
+    Manager: {{employee.name}} [ {{department}} ]<br>
+    Reports:
+    <ul>
+        <li ng-repeat="employee in employee.reports">
+            {{employee.name}} [ {{department}} ]
+        </li>
+    </ul>
+    <hr>
+    {{greeting}}
+</div>
+</body>
+</html>

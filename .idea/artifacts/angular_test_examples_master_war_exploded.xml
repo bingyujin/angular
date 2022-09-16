@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="angular-test-examples-master:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/angular_test_examples_master_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Hibernate 5.4.11-5.4.11" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="angular-test-examples-master/web/Web" />
+    </root>
+  </artifact>
+</component>

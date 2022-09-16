@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example - example-heroComponentTree-production</title>
+
+
+    <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+    <script src="index.js"></script>
+    <script src="heroList.js"></script>
+    <script src="heroDetail.js"></script>
+    <script src="editableField.js"></script>
+
+
+
+</head>
+<body ng-app="heroApp">
+<hero-list></hero-list>
+</body>
+</html>
+
+<!--
+<hero-list>[in cookies-personalize-form.html] binds to component 'heroList'[in heroList.js]
+$ctrl binds to the component that has its belonging templateUrl
+
+    angular.module('heroApp').component('heroList', {
+        templateUrl: 'heroList.html',
+        controller: HeroListController
+    });[in heroList.js]
+
+<hero-list>[in cookies-personalize-form.html] binds to component 'heroList'[in heroList.js]
+through templateUrl: 'heroList.html'[in heroList.js],
+[in heroList.html] <hero-detail ng-repeat="hero in $ctrl.list" hero="hero" on-delete="$ctrl.deleteHero(hero)"
+   on-update="$ctrl.updateHero(hero, prop, value)"></hero-detail>, $ctrl is from component 'heroList'[in heroList.js],
+   and can get from HeroListController[in heroList.js]
+   $ctrl.list=[{name: 'Superman',location: ''},{name: 'Batman',location: 'Wayne Manor'}];
+   hero=$ctrl.list=[{name: 'Superman',location: ''},{name: 'Batman',location: 'Wayne Manor'}];
+through <hero-detail>
+hero binds to bindings: {hero: '<'}[in heroDetail.js] <=> [{name: 'Superman',location: ''},{name: 'Batman',location: 'Wayne Manor'}]=bindings: {hero: '<'}
+on-delete binds to bindings: {onDelete: '&',}
+on-update binds to bindings: {onUpdate: '&',}
+->onUpdate=on-update"$ctrl.updateHero(hero, prop, value)"=ctrl.updateHero = function(hero, prop, value) {
+            hero[prop] = value;
+        };
+{onUpdate: '&',}= ctrl.update = function(prop, value) {
+            ctrl.onUpdate({hero: ctrl.hero, prop: prop, value: value});
+        };
+
+
+   angular.module('heroApp').component('heroDetail', {
+        templateUrl: 'heroDetail.html',
+        controller: HeroDetailController,
+        bindings: {
+            hero: '<',
+            onDelete: '&',
+            onUpdate: '&'
+        }
+    });[in heroDetail.js]
+
+<hero-detail>[in heroList.html] binds to component 'heroDetail'[in heroDetail.js]
+through templateUrl: 'heroDetail.html'[in heroDetail.js]
+[in heroDetail.html] <div>
+    Name: {{$ctrl.hero.name}}<br>
+    Location:
+    <editable-field field-value="$ctrl.hero.location" field-type="text"
+                    on-update="$ctrl.update('location', value)"></editable-field>
+    <br>
+    <button ng-click="$ctrl.delete()">Delete</button>
+</div>, $ctrl is from component 'heroDetail'[in heroDetail.js],
+and can get from HeroDetailController[in heroDetail.js]
+$ctrl.hero= bindings: {hero: '<'}=[{name: 'Superman',location: ''},{name: 'Batman',location: 'Wayne Manor'}]
+$ctrl.delete()->component 'heroDetail'->controller HeroDetailController
+$ctrl.update('location', value)->component 'heroDetail'->controller HeroDetailController
+
+
+angular.module('heroApp').component('editableField', {
+        templateUrl: 'editableField.html',
+        controller: EditableFieldController,
+        bindings: {
+            fieldValue: '<',
+            fieldType: '@?',
+            onUpdate: '&'
+        }
+    });[in editableField.js]
+
+
+<editable-field field-value="$ctrl.hero.location" field-type="text"
+                    on-update="$ctrl.update('location', value)"></editable-field>
+
+<editable-field>[in heroDetail.html] binds to component 'editableField'[in editableField.js]
+through templateUrl: 'editableField.html',[in editableField.js]
+[in editableField.html]
+  <span ng-switch="$ctrl.editMode">
+  <input ng-switch-when="true" type="{{$ctrl.fieldType}}" ng-model="$ctrl.fieldValue">
+  <span ng-switch-default>{{$ctrl.fieldValue}}</span>
+</span>
+<button ng-click="$ctrl.handleModeChange()">{{$ctrl.editMode ? 'Save' : 'Edit'}}</button>
+<button ng-if="$ctrl.editMode" ng-click="$ctrl.reset()">Reset</button>
+,$ctrl is from component 'editableField'[in editableField.js],
+and can get from EditableFieldController[in editableField.js]
+$ctrl.editMode=false
+$ctrl.fieldType=
+$ctrl.fieldValue
+$ctrl.handleModeChange()
+$ctrl.reset()
+
+
+
+
+
+
+
+Copyright 2022 Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
